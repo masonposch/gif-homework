@@ -11,15 +11,18 @@ var topics = ['Happy', ' Yes', 'No', 'Shrug', 'Facepalm', 'Sarcastic', 'Interest
 // 	});
 
 
-window.onload = function(){
+var makeButtons = function(){
+	$('#theButtons').empty();
 	for(var i=0; i < topics.length; i++){
-		$('#theButtons').append('<button>'+topics[i]+'</button>')
 		var a = $('<button>'); 
+		a.addClass('emotion');
 		a.attr('data-name', topics[i]); // Added a data-attribute
+		a.text(topics[i]);
+		$('#theButtons').append(a);
 	}
 }
 
-function displayGIF(){
+var displayGIF = function(){
 
 	var emotions = $(this).attr('data-name');
 	var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + emotions + "&api_key=dc6zaTOxFJmzC";
@@ -46,7 +49,8 @@ function displayGIF(){
 
 }
 
-displayGIF();
+$(document).on('click', '.emotion', displayGIF);
+makeButtons();
 
 
 
