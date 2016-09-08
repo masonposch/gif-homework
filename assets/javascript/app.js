@@ -38,18 +38,9 @@ function displayGIF(){
 
 	    gifDiv.append(pRating);
 
-	    var theGIF = response.
+	    var theGIF = "http://api.giphy.com/v1/gifs?api_key=dc6zaTOxFJmzC&ids=feqkVgjJpYtjy," + gifID;
 
-
-
-
-	
-
-
-
-
-
-
+	    gifDiv.append(theGIF);
 
 	});
 
