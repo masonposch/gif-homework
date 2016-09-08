@@ -22,14 +22,23 @@ window.onload = function(){
 function displayGIF(){
 
 	var emotions = $(this).attr('data-name');
-	var queryURL = "http://api.giphy.com/v1/gifs/feqkVgjJpYtjy?api_key=dc6zaTOxFJmzC";
+	var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + emotions + "&api_key=dc6zaTOxFJmzC";
 
 	$.ajax({url: queryURL, method: 'GET'})
 	 .done(function(response) {
+	 	console.log(response);
 
-	 	var gifDiv = $('<div class="gif">')
+	 	var gifDiv = $('<div class="gif col-xs-6 col-sm-6 col-md-3 col-lg-3">');
+
+	 	var gifID = response.id;
 	    
 	    var rating = response.rating;
+
+	    var pRating = $("<p>").text("Rating: " + rating);
+
+	    gifDiv.append(pRating);
+
+	    var theGIF = response.
 
 
 
