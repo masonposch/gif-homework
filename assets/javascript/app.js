@@ -19,26 +19,32 @@ var displayGIF = function(){
 	 .done(function(response) {
 	 	console.log(response);
 
-	 	var gifDiv = $('<div class="gif col-xs-6 col-sm-6 col-md-3 col-lg-3">');
+	 	for(var i = 0; i < 15; i++){
 
-	 	var gifID = response.data[0].id;
-	    
-	    var rating = response.data[0].rating;
+		 	var gifDiv = $('<div class="gif col-xs-6 col-sm-6 col-md-3 col-lg-3">');
 
-	    var pRating = $("<p>").text("Rating: " + rating);
+		 	var gifID = response.data[i].id;
+		    
+		    var rating = response.data[i].rating;
 
-	    gifDiv.append(pRating);
+		    var pRating = $("<p>").text("Rating: " + rating);
 
-	    // var theGIF = "http://api.giphy.com/v1/gifs?api_key=dc6zaTOxFJmzC&ids=feqkVgjJpYtjy," + gifID;
-	    var theGIF = response.data[0].url;
+		    $(gifDiv).append(pRating);
 
-	    gifDiv.append(theGIF);
+		    // var theGIF = "http://api.giphy.com/v1/gifs?api_key=dc6zaTOxFJmzC&ids=feqkVgjJpYtjy," + gifID;
+		    var theGIF = $('<img>').attr('src', response.data[i].images.fixed_height.url);
 
-	    console.log(rating);
+		    $(gifDiv).append(theGIF);
 
-	    console.log(gifID);
+		    console.log(rating);
 
-	    console.log(theGIF);
+		    console.log(gifID);
+
+		    console.log(theGIF);
+
+		    $('#gifSection').append(gifDiv)
+
+		}
 
 	});
 
