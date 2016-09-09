@@ -19,6 +19,8 @@ var displayGIF = function(){
 	 .done(function(response) {
 	 	console.log(response);
 
+	 	$('#gifSection').empty();
+
 	 	for(var i = 0; i < 15; i++){
 
 		 	var gifDiv = $('<div class="gif col-xs-6 col-sm-6 col-md-3 col-lg-3">');
@@ -55,7 +57,7 @@ var makeButtons = function(){
 	for(var i=0; i < topics.length; i++){
 		var a = $('<button>'); 
 		a.addClass('emotion');
-		a.attr('data-name', topics[i]); // Added a data-attribute
+		a.attr('data-name', topics[i]);
 		a.text(topics[i]);
 		$('#theButtons').append(a);
 	}
