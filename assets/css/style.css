@@ -1,5 +1,6 @@
 body {
-	background-color: #D0CAC9;	
+	background-color: #D0CAC9;
+	font-family: 'Raleway', sans-serif;	
 }
 
 button {
@@ -15,7 +16,7 @@ button {
 }
 
 form {
-	margin-top: 20px;
+	margin-top: 40px;
 	font-size: 26px;
 }
 
