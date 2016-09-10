@@ -23,7 +23,7 @@ var displayGIF = function(){
 
 	 	for(var i = 0; i < 16; i++){
 
-		 	var gifDiv = $('<div class="gif col-xs-6 col-sm-6 col-md-3 col-lg-3">');
+		 	var gifDiv = $('<div id="gifDiv" class="gif col-xs-6 col-sm-6 col-md-3 col-lg-3">');
 
 		 	var gifID = response.data[i].id;
 		    
@@ -34,7 +34,7 @@ var displayGIF = function(){
 		    $(gifDiv).append(pRating);
 
 		    // var theGIF = "http://api.giphy.com/v1/gifs?api_key=dc6zaTOxFJmzC&ids=feqkVgjJpYtjy," + gifID;
-		    var theGIF = $('<img>').attr('src', response.data[i].images.fixed_height.url);
+		    var theGIF = $('<img>').attr('src', response.data[i].images.fixed_width.url);
 
 		    $(gifDiv).append(theGIF);
 

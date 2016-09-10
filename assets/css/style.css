@@ -32,3 +32,12 @@ form {
 	padding-left: 15px;
 	padding-right: 15px;
 }
+
+#gifSection {
+	margin-top: 50px;
+}
+
+#gifDiv {
+	margin-top: 30px;
+	font-size: 20px;
+}
