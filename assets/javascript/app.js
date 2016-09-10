@@ -21,7 +21,7 @@ var displayGIF = function(){
 
 	 	$('#gifSection').empty();
 
-	 	for(var i = 0; i < 15; i++){
+	 	for(var i = 0; i < 16; i++){
 
 		 	var gifDiv = $('<div class="gif col-xs-6 col-sm-6 col-md-3 col-lg-3">');
 
