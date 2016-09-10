@@ -63,6 +63,16 @@ var makeButtons = function(){
 	}
 }
 
+$('#addButton').on('click', function(){
+	var emotions = $('#newButton').val().trim();
+	topics.push(emotions);
+	makeButtons();
+	$('#newButton').val('');
+	return false;
+});
+
+
+
 $(document).on('click', '.emotion', displayGIF);
 makeButtons();
 
